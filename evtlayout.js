@@ -6,151 +6,146 @@ var config = {
     },
     content: [{
         type: 'row',
-        content:[{
+        content: [{
             type: 'column',
             width: 10,
-            content:[{
+            content: [{
                 type: 'component',
                 componentName: 'treeComponent',
-                componentState: { view: 'internal', id: '0' },
+                componentState: {view: 'internal', id: '0'},
                 isClosable: false,
                 title: 'Internal System'
-            },{
+            }, {
                 type: 'component',
                 height: 20,
                 componentName: 'treeComponent',
-                componentState: { view: 'external', id: '1' },
+                componentState: {view: 'external', id: '1'},
                 isClosable: false,
                 title: 'External System'
-            },{
+            }, {
                 type: 'component',
                 height: 20,
                 componentName: 'treeComponent',
-                componentState: { view: 'code', id: '2' },
+                componentState: {view: 'code', id: '2'},
                 isClosable: false,
                 title: 'Code System'
-            },{
+            }, {
                 type: 'stack',
                 height: 20,
                 content: [{
                     type: 'component',
                     componentName: 'statusComponent',
-                    componentState: {  },
+                    componentState: {},
                     isClosable: false,
                     title: 'Status'
                 }]
             }]
-        },{
+        }, {
             type: 'column',
-            content:[{
+            content: [{
                 type: 'row',
-                height: 150,
+                height: 20,
                 content: [{
                     type: 'component',
                     componentName: 'dataComponent',
-                    componentState: {  },
+                    componentState: {},
                     isClosable: false,
                     title: 'Hardware Data'
-                },{
+                }, {
                     type: 'component',
                     componentName: 'barComponent',
-                    componentState: {  },
+                    componentState: {},
                     isClosable: false,
                     title: 'System Resources'
                 }]
-            },{
+            }, {
                 type: 'row',
                 content: [{
                     type: 'stack',
+                    width: 50,
                     content: [{
                         type: 'component',
+                        componentName: 'interceptedMessage',
+                        componentState: {},
+                        isClosable: false,
+                        title: 'Intercepted Msg'
+                    }, {
+                        type: 'component',
                         componentName: 'logComponent',
-                        componentState: { type: 'diagnostic' },
+                        componentState: {type: 'diagnostic'},
                         isClosable: false,
                         title: 'Diagnostic Report'
-                    },{
+                    }, {
                         type: 'component',
                         componentName: 'logComponent',
-                        componentState: { type: 'info' },
+                        componentState: {type: 'info'},
                         isClosable: false,
                         title: 'Log - Info'
-                    },{
+                    }, {
                         type: 'component',
                         componentName: 'logComponent',
-                        componentState: { type: 'warning' },
+                        componentState: {type: 'warning'},
                         isClosable: false,
                         title: 'Log - Warning'
-                    },{
+                    }, {
                         type: 'component',
                         componentName: 'logComponent',
-                        componentState: { type: 'error' },
+                        componentState: {type: 'error'},
                         isClosable: false,
                         title: 'Log - Error'
                     }]
-                },{
+                }, {
                     type: 'component',
                     componentName: 'codeComponent',
-                    componentState: {  },
+                    componentState: {},
                     isClosable: false,
                     title: 'Code Viewer'
-                },{
+                }, {
                     type: 'stack',
                     content: [{
                         type: 'component',
                         componentName: 'graphComponent',
-                        componentState: {  },
+                        componentState: {},
                         isClosable: false,
                         title: 'Interference Graph'
-                    },{
-                        type: 'component',
-                        componentName: 'welcomeComponent',
-                        componentState: {  },
-                        isClosable: false,
-                        title: 'Welcome'
+                    }]
                 }]
-            }]
-            },{
+            }, {
                 type: 'stack',
                 height: 18,
-                content:[{
+                content: [{
                     type: 'component',
                     componentName: 'timelineComponent',
-                    componentState: {  },
+                    componentState: {},
                     isClosable: false,
                     title: 'Timeline'
-                },{
-                    type: 'component',
-                    componentName: 'consoleComponent',
-                    componentState: {  },
-                    isClosable: false,
-                    title: 'Console'
                 }]
             }]
-        },{
+        }, {
             type: 'column',
             width: 10,
-            content:[{
+            content: [{
                 type: 'stack',
-                content:[{
+                content: [{
                     type: 'component',
                     componentName: 'superstructureComponent',
-                    componentState: {  },
+                    componentState: {},
                     isClosable: false,
                     title: 'Superstructure'
                 }]
-            },{
+            }, {
                 type: 'column',
                 height: 30,
                 content: [{
                     type: 'component',
                     componentName: 'substructureComponent',
-                    componentState: {  },
+                    componentState: {},
                     isClosable: false,
                     title: 'Substructure'
-                },{
+                }, {
                     type: 'component',
                     componentName: 'analysisComponent',
-                    componentState: {  },
+                    componentState: {},
                     isClosable: false,
                     title: 'Analysis'
                 }]
@@ -158,4 +153,3 @@ var config = {
         }]
     }]
 };
-var layout = new GoldenLayout(config);
